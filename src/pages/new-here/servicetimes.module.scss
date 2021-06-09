@@ -1,0 +1,143 @@
+/* 
+    SERVICE TIMES
+*/
+
+.serviceTimes {
+  //border: 1px dotted blue;
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  .serviceTimesItem:nth-child(1) {
+    margin-right: 2rem;
+  }
+
+  .serviceTimesItem:nth-last-child(1) {
+    margin-left: 2rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    margin-bottom: 2rem;
+
+    .serviceTimesItem:nth-child(1) {
+      margin-right: 0;
+    }
+
+    .serviceTimesItem:nth-last-child(1) {
+      margin-left: 0;
+    }
+  }
+  .sundayServices {
+    @media screen and (max-width: 600px) {
+      margin: 2rem 0;
+    }
+  }
+}
+
+.timesTable {
+  flex: 1;
+
+  .articleTitle {
+    font-weight: 500;
+    //font-size: 20px;
+    text-align: center;
+    margin-bottom: 0.75rem;
+
+    @media screen and (max-width: 1024px) {
+      //font-size: 25px;
+      margin-bottom: 0.75rem;
+    }
+    @media screen and (max-width: 600px) {
+      //font-size: 22px;
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.table {
+  //border: 1px dotted blue;
+  width: 100%;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.45rem 0;
+
+  h5 {
+    text-transform: uppercase;
+  }
+
+  .lines {
+    flex: 1;
+    flex-grow: 50%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: grey;
+    height: 1px;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .tableCell {
+    &:nth-last-child(1) {
+      margin-left: 0.5rem;
+    }
+    &:nth-child(1) {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.weekdayServices {
+  @media screen and (max-width: 768px) {
+    /* .articleTitle {
+       text-align: left;
+    } */
+    .tableRow {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .tableCell {
+        &:nth-last-child(1) {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .tableRow {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .tableCell {
+        &:nth-last-child(1) {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .tableRow {
+    flex-direction: column;
+  }
+}
+
+.stockImg {
+  flex: 0.75;
+  height: 40vh;
+  //border: 1px dotted blue;
+
+  @media screen and (max-width: 1024px) {
+    height: 20vh;
+  }
+}

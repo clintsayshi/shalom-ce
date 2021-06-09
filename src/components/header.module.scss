@@ -1,0 +1,235 @@
+.header {
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  @media (min-width: 600px) {
+    position: relative;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1024px) {
+  }
+}
+
+.brand__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-family: fraunces;
+  z-index: 8;
+  width: max-content;
+  padding: 0.5rem 0;
+
+  .logo__name {
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #976327;
+  }
+  .logo__name2 {
+    font-size: 0.5rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #976327;
+  }
+
+  img {
+    width: 4rem;
+    height: inherit;
+    margin-right: 0.25rem;
+  }
+
+  @media screen and (min-width: 1025px) {
+    img {
+      width: 6rem;
+      height: inherit;
+      margin-right: 0.5rem;
+    }
+    .logo__name {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+    .logo__name2 {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.navbarMobileToggle {
+  font-size: 2rem;
+  color: #333333;
+  z-index: 8;
+  transition: 0.3s;
+  background: none;
+  border: none;
+  line-height: 0;
+
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+.navbarLinks {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  padding: 1rem 0;
+
+  background: white;
+  color: black;
+  z-index: 5;
+  transition: 0.33s ease-in-out;
+
+  @media screen and (min-width: 600px) {
+    padding: 0;
+    flex-direction: row;
+    width: max-content;
+    display: flex;
+    position: relative;
+  }
+  @media screen and (min-width: 769px) {
+    width: max-content;
+
+    position: relative;
+    background-color: transparent;
+  }
+  @media screen and (min-width: 1024px) {
+  }
+}
+
+.lin{
+  position: initial;
+}
+
+.navbarLink {
+  position: relative;
+  margin: 0.2rem auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+
+  @media screen and (min-width: 600px) {
+    margin: 1rem 0;
+  }
+
+  @media screen and (min-width: 769px) {
+    font-size: 1.25rem;
+  }
+  @media screen and (min-width: 1025px) {
+    font-size: 1.1rem;
+  }
+}
+
+.navbarLink:hover {
+  * {
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+#navlink_with_dropdown {
+  border: none;
+  background: none;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    font-size: 1rem;
+    font-family: "poppins", "sans-serif";
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0 0.25rem;
+    color: #333333;
+  }
+
+  @media screen and (min-width: 769px) {
+    & > * {
+      font-size: 1.25rem;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    & > * {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+#dropdown__menu {
+  display: none;
+  list-style: none;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+
+  @media screen and (min-width: 600px) {
+    position: absolute;
+    min-width: 150px;
+    background-color: white;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    top: 100%;
+  }
+}
+
+.dropdownMenu .navbarLink {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #3333;
+
+  &:hover {
+    background: #cecbcb33;
+    a {
+      color: black;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    border: 1px solid #3333;
+    margin: 0 !important;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #3333;
+  z-index: 6;
+}
+
+.display__flex {
+  display: flex !important;
+  z-index: 8;
+}
+
+.display__block {
+  display: block !important;
+}

@@ -1,0 +1,58 @@
+/* 
+
+    LEADERSHIP
+
+*/
+
+.leaders {
+  margin-top: 1rem;
+}
+
+.leader {
+  border: 1px solid #3333;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  @media screen and (min-width: 600px) {
+    width: 60%;
+    padding: 1rem 0;
+  }
+  @media screen and (min-width: 769px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 30%;
+    padding: 1rem 0;
+  }
+}
+
+.leaderCover {
+  width: 100%;
+  height: 20em;
+  @media screen and (min-width: 600px) {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+.leaderDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  @media screen and (min-width: 600px) {
+    margin-bottom: 0;
+  }
+}
+
+.leaderName {
+  font-weight: 400;
+  text-align: center;
+}
+
+.leaderRole {
+  width: inherit;
+  text-transform: uppercase;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+/* 
+    SERVICE TIMES
+*/
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1.5rem auto;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.tableCell {
+  margin-bottom: 1rem;
+  flex-basis: 48%;
+  height: fit-content;
+
+  @media screen and (max-width: 768px) {
+    //
+  }
+}

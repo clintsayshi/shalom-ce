@@ -1,0 +1,245 @@
+# In your static/admin/config.yml file
+
+backend:
+  name: git-gateway
+  branch: master
+
+local_backend: true
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    media_folder: "media"
+    public_folder: "media"
+    files:
+      - label: "About"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - {label: "Name", name: "name",widget: "string",default: "Shalom Christian Embassy"}
+          - {label: "caption",name: "caption", widget: "string", default: "Church of all Nations"}
+          - {label: "Cover Image", name: "coverImg", widget: "image"}
+          - label: "Socials",
+            name: "socials",
+            widget: "list",
+            summary: "{{fields.url}} - {{fields.username}}"
+              - { label: "Username", name: "username", widget: "string" }
+              - { label: "Base URL", name: "url", widget: "string" }
+              - { label: "Platform", name: 'platform', widget: "select", options: ["twitter", "facebook", "instagram"]}
+
+      - label: "Donations Page"
+        name: "donations"
+        file: "content/donations.md"
+        fields:
+          - { label: Page Title, name: pageTitle, widget: string }
+          - { label: Page Banner, name: pageBanner, widget: text }
+          - { label: Bank Name, name: bank, widget: string }
+          - { label: Account Number, name: AccNumber, widget: string }
+          - { label: Branch Code, name: branchCode, widget: string }
+
+      - label: "Contact Page"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+          - { label: "Page Title", name: "pagetitle", widget: "string" }
+          - { label: "Page Banner", name: "pageBanner", widget: "string" }
+          - label: "Physical Address",
+            name: "physclAddrss",
+            widget: "list",
+            fields:
+              - {
+              label: "Address Line",
+              name: "line",
+              widget: "string",
+            }
+          - label: "Postal Address",
+            name: "pstlAddrss",
+            widget: "list",
+            fields:
+              - {
+              label: "Address Line",
+              name: "line",
+              widget: "string",
+            }
+            
+          - {
+              label: "Zip Code",
+              name: "zipcode",
+              widget: "string",
+            }
+          - label: "Tel Numbers",
+            name: "telNumbers",
+            widget: "list",
+            fields:
+              - {
+              label: "Number Holder",
+              name: "nmbrhldr",
+              widget: "string",
+            }
+              - {
+              label: "Number",
+              name: "number",
+              widget: "string",
+            }
+          - { label: "Email", name: "email", widget: "string" }
+
+      - label: "Ministries Page"
+        name: "ministriesPage"
+        file: "content/ministries.md"
+        fields:
+          - { label: "Title", name: "pageTitle", widget: "string" }
+          - { label: "Banner", name: "pageBanner", widget: "string" }
+          - label: "Ministries"
+            name: "ministries"
+            widget: "list"
+            summary: "{{fields.ministryName}} - {{fields.ministryDesc}}"
+            fields:
+              - { label: "Ministry Name", name: "name", widget: "string" }
+              - { label: "Description", name: "desc", widget: "string" }
+
+      - label: "Leadership Page"
+        name: "leadership"
+        file: "content/leadership.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Banner", name: "banner", widget: "string" }
+          - label: "Church Leaders"
+            name: "leaders"
+            widget: "list"
+            summary: "{{fields.name}} - {{fields.role}}"
+            fields:
+              - {
+                  label: "Name",
+                  name: "name",
+                  widget: "string",
+                  default: "Apostolic Alliance",
+                }
+              - {
+                  label: "Role",
+                  name: "role",
+                  widget: "string",
+                  default: "Assistant Pastor",
+                }
+              - {
+                  label: "Description",
+                  name: "bio",
+                  widget: "text",
+                  default: "A ministry for the apostolic lol i am just guessing man",
+                }
+              - {
+                  label: "Potrait",
+                  name: "potrait",
+                  widget: "image",
+                  default: "/assets/default-user.png",
+                }
+
+      - label: "Mission Vision"
+        name: "missionVision"
+        file: "content/missionvision.md"
+        fields:
+          - {
+              label: "Vision Statement",
+              name: "vsnSttmnt",
+              widget: "text",
+            }
+          - { label: "Relevant Bible Verse", name: "quotedVerse", widget: "string" }
+          - {
+              label: "Relevant Bible Verse from",
+              name: "quotedVerseFrom",
+              widget: "string",
+            }
+          - {
+              label: "Mission Statement",
+              name: "mssnSttmnt",
+              widget: "text",
+            }
+          - label: "Our Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+
+      - label: "Statement of Faith"
+        name: "statementOfFaith"
+        file: "content/statement-of-faith.md"
+        fields:
+          - { label: Page Title, name: pagetitle, widget: string }
+          - { label: Page Banner, name: pageBanner, widget: text }
+          - label: "Our Beliefs"
+            name: "ourBeliefs"
+            widget: "list"
+            summary: "{{fields.believe}}"
+            fields:
+              - { label: "Belief", name: "belief", widget: text }
+
+      - label: "Service Times"
+        name: "serivicetimes"
+        file: "content/servicetimes.md"
+        fields:
+          - { label: Page Title, name: pagetitle, widget: string }
+          - { label: Page Banner, name: pageBanner, widget: text }
+          - {
+              label: "Sunday Main Service",
+              name: "sundayMainSrvc",
+              widget: "string",
+            }
+          - {
+              label: "Sunday Services Cover",
+              name: "sundayServiceCovr",
+              widget: image,
+            }
+          - label: "Sunday Schools"
+            name: "sundaySchools"
+            widget: "list"
+            summary: "{{fields.name - fields.time}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label:  "Time", name: "time", widget: "string" }
+          - {
+              label: "Weekday Services Cover",
+              name: "weekdayServiceCvr",
+              widget: "image",
+            }
+          - label: "Weekday Services"
+            name: "weekdayServices"
+            widget: "list"
+            fields:
+              - { label: Day of Week, name: "weekday", widget: "string" }
+              - label: "Service Details"
+                name: "serviceDetails"
+                widget: "list"
+                summary: "{{fields.name - fields.time}}"
+                fields:
+                  - {
+                      label: "Name of Service",
+                      name: "name",
+                      widget: "string",
+                    }
+                  - { label: "Time of Service", name: "time", widget: "string" }
+      
+      - label: "Events Page"
+        name: "events"
+        file: "content/pages/events.md"
+        fields:
+          - {
+              label: "Page Title",
+              name: "pagetitle",
+              widget: "string",
+              default: "Events",
+            }
+          - {
+              label: "Banner",
+              name: "pageBanner",
+              widget: "string",
+              default: "Upcoming church events",
+            }
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Cover", name: "cover", widget: "image" }
+              - { label: "Description", name: "desc", widget: "text" }

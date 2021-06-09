@@ -1,0 +1,27 @@
+.donationsHeader {
+  text-align: center;
+
+  h2 {
+    font-family: fraunces;
+  }
+  p {
+    font-size: 1rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+.bankDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bankDetailsLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}

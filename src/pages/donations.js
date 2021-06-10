@@ -15,7 +15,7 @@ const DonationsPage = (props) => {
     <Layout>
       <SEO title="Donations" />
 
-      <div className={`pageContainer ${styles.donationsHeader}`}>
+      <div className={`pageContainer pageHeading`}>
         <h2 className="page__title">{data.pageTitle}</h2>
         <p className="page__banner">{data.pageBanner}</p>
       </div>

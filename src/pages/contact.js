@@ -47,6 +47,7 @@ const ContactPage = (props) => {
                 {data.physclAddrss.map((item, index) => (
                   <p key={index}>{item.line}</p>
                 ))}
+                <p>{data.zipCode}</p>
               </address>
             </div>
 
@@ -57,7 +58,7 @@ const ContactPage = (props) => {
                 {data.pstlAddrss.map((item, index) => (
                   <p key={index}>{item.line}</p>
                 ))}
-                {data.zipCode}
+                <p>{data.zipCode}</p>
               </address>
             </div>
 

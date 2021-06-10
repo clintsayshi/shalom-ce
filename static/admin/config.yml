@@ -22,9 +22,9 @@ collections:
           - {label: "Name", name: "name",widget: "string",default: "Shalom Christian Embassy"}
           - {label: "caption",name: "caption", widget: "string", default: "Church of all Nations"}
           - {label: "Cover Image", name: "coverImg", widget: "image"}
-          - label: "Socials",
-            name: "socials",
-            widget: "list",
+          - label: "Socials"
+            name: "socials"
+            widget: "list"
             summary: "{{fields.url}} - {{fields.username}}"
               - { label: "Username", name: "username", widget: "string" }
               - { label: "Base URL", name: "url", widget: "string" }

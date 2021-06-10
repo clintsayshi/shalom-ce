@@ -19,13 +19,14 @@ collections:
         name: "about"
         file: "content/about.md"
         fields:
-          - { label: "Name", name: "name",widget: "string",default: "Shalom Christian Embassy"}
-          - { label: "caption",name: "caption", widget: "string", default: "Church of all Nations"}
-          - { label: "Cover Image", name: "coverImg", widget: "image"}
+          - {label: "Name", name: "name",widget: "string",default: "Shalom Christian Embassy"}
+          - {label: "caption",name: "caption", widget: "string", default: "Church of all Nations"}
+          - {label: "Cover Image", name: "coverImg", widget: "image"}
           - label: "Socials"
             name: "socials"
             widget: "list"
             summary: "{{fields.url}} - {{fields.username}}"
+            fields:
               - { label: "Username", name: "username", widget: "string" }
               - { label: "Base URL", name: "url", widget: "string" }
               - { label: "Platform", name: 'platform', widget: "select", options: ["twitter", "facebook", "instagram"]}
@@ -46,18 +47,18 @@ collections:
         fields:
           - { label: "Page Title", name: "pagetitle", widget: "string" }
           - { label: "Page Banner", name: "pageBanner", widget: "string" }
-          - label: "Physical Address",
-            name: "physclAddrss",
-            widget: "list",
+          - label: "Physical Address"
+            name: "physclAddrss"
+            widget: "list"
             fields:
               - {
               label: "Address Line",
               name: "line",
               widget: "string",
             }
-          - label: "Postal Address",
-            name: "pstlAddrss",
-            widget: "list",
+          - label: "Postal Address"
+            name: "pstlAddrss"
+            widget: "list"
             fields:
               - {
               label: "Address Line",
@@ -70,9 +71,9 @@ collections:
               name: "zipcode",
               widget: "string",
             }
-          - label: "Tel Numbers",
-            name: "telNumbers",
-            widget: "list",
+          - label: "Tel Numbers"
+            name: "telNumbers"
+            widget: "list"
             fields:
               - {
               label: "Number Holder",

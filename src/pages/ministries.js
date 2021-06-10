@@ -1,10 +1,8 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-
-import { VscChevronRight } from "react-icons/vsc";
 
 import * as styles from "./ministries.module.scss";
 
@@ -15,19 +13,9 @@ const MinistriesPage = (props) => {
   return (
     <Layout>
       <SEO title="Ministries" />
-      <div className="top">
-        <div className="pageContainer topInner">
-          <Link className="topLink" to="/">
-            Home
-          </Link>
-          <VscChevronRight />
-          <Link className="topLink">Ministries</Link>
-        </div>
-      </div>
 
       <div className="pageContainer pageHeading">
         <h2 className="page__title">{data.pageTitle}</h2>
-        <p className="page__banner">{data.pageBanner}</p>
       </div>
 
       <section className={`pageContainer ${styles.ministries}`}>

@@ -16,16 +16,7 @@ const LeadershipPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="What we believe" />
-      <div className="top">
-        <div className="pageContainer topInner">
-          <Link className="topLink" to="/">
-            Home
-          </Link>
-          <VscChevronRight />
-          <Link className="topLink">Our leadership</Link>
-        </div>
-      </div>
+      <SEO title="Our Leadership" />
 
       <div className="pageContainer pageHeading">
         <h2 className="page__title">Our Leadership.</h2>

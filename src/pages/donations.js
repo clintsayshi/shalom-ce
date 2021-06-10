@@ -14,15 +14,6 @@ const DonationsPage = (props) => {
   return (
     <Layout>
       <SEO title="Donations" />
-      <div className="top">
-        <div className="pageContainer topInner">
-          <Link className="topLink" to="/">
-            Home
-          </Link>
-          <VscChevronRight />
-          <Link className="topLink">Donations</Link>
-        </div>
-      </div>
 
       <div className={`pageContainer ${styles.donationsHeader}`}>
         <h2 className="page__title">{data.pageTitle}</h2>

@@ -15,16 +15,7 @@ const MissionPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="What we believe" />
-      <div className="top">
-        <div className="pageContainer topInner">
-          <Link className="topLink" to="/">
-            Home
-          </Link>
-          <VscChevronRight />
-          <Link className="topLink">What we believe</Link>
-        </div>
-      </div>
+      <SEO title="Mission, Vision, Values..." />
 
       <section className={`pageContainer ${styles.row}`}>
         <h2 className="page__title">Vision Statement.</h2>

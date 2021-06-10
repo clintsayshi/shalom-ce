@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { VscChevronRight } from "react-icons/vsc";
 
 import ContactForm from "../components/contact-form";
 
@@ -16,20 +15,11 @@ const ContactPage = (props) => {
   return (
     <Layout>
       <SEO title="Contact Info" />
-      <div className="top">
-        <div className="pageContainer topInner">
-          <Link className="topLink" to="/">
-            Home
-          </Link>
-          <VscChevronRight />
-          <Link className="topLink">Contact us</Link>
-        </div>
-      </div>
 
       {/* 25.49554443359375,31.317039489746094 */}
       <div className="pageContainer pageHeading">
         <h2 className="page__title">Contact Us</h2>
-        <p className="page__banner">{data.pageBanner}</p>
+        <p className="page__banner">Leave us a message</p>
       </div>
 
       <div className={`pageContainer ${styles.contacts}`}>

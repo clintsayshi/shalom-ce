@@ -20,15 +20,6 @@ const ServiceTimesPage = (props) => {
   return (
     <Layout>
       <SEO title="Service Times" />
-      {/* <div className="top">
-        <div className="pageContainer topInner">
-          <Link className="topLink" to="/">
-            Home
-          </Link>
-          <VscChevronRight />
-          <Link className="topLink">Service Times</Link>
-        </div>
-      </div> */}
 
       <div className="pageContainer pageHeading">
         <h2 className="page__title">{data.pageTitle}</h2>

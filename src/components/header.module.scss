@@ -1,20 +1,33 @@
 .header {
   position: relative;
+  font-size: 14px !important;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  //justify-content: space-between;
+  //align-items: center;
+  flex-direction: column;
   position: relative;
 
   @media (min-width: 600px) {
     position: relative;
-    flex-direction: row;
+    //flex-direction: row;
   }
 
   @media screen and (min-width: 1024px) {
   }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom {
+  //border: 1px dotted blue;
+  background: rgba(151, 99, 39, 0.062);
 }
 
 .brand__logo {
@@ -67,6 +80,14 @@
   }
 }
 
+#slogan {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+
 .navbarMobileToggle {
   font-size: 2rem;
   color: #333333;
@@ -84,13 +105,14 @@
 .navbarLinks {
   display: none;
   flex-direction: column;
-  align-items: center;
+  //align-items: center;
   list-style: none;
   position: absolute;
   top: 100%;
-  right: 0;
-  left: 0;
-  padding: 1rem 0;
+  right: 2.5%;
+  left: 2.5%;
+  padding: 1.5rem 0;
+  padding: 1.5rem 2rem;
 
   background: white;
   color: black;
@@ -98,11 +120,18 @@
   transition: 0.33s ease-in-out;
 
   @media screen and (min-width: 600px) {
+    background: none;
     padding: 0;
     flex-direction: row;
     width: max-content;
     display: flex;
+    align-items: center;
     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
   }
   @media screen and (min-width: 769px) {
     width: max-content;
@@ -114,26 +143,33 @@
   }
 }
 
-.lin{
+.link {
   position: initial;
 }
 
 .navbarLink {
   position: relative;
-  margin: 0.2rem auto;
+  margin: 0.2rem 0;
   padding: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
 
   @media screen and (min-width: 600px) {
-    margin: 1rem 0;
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.5rem;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
   }
 
   @media screen and (min-width: 769px) {
-    font-size: 1.25rem;
+    font-size: 14px;
   }
   @media screen and (min-width: 1025px) {
-    font-size: 1.1rem;
+    font-size: 14px;
   }
 }
 
@@ -149,7 +185,7 @@
 #navlink_with_dropdown {
   border: none;
   background: none;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,21 +193,22 @@
   & > * {
     font-size: 1rem;
     font-family: "poppins", "sans-serif";
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.4;
     padding: 0;
     margin: 0 0.25rem;
+    margin-left: 0;
     color: #333333;
   }
 
   @media screen and (min-width: 769px) {
     & > * {
-      font-size: 1.25rem;
+      font-size: 14px;
     }
   }
   @media screen and (min-width: 769px) {
     & > * {
-      font-size: 1.1rem;
+      font-size: 14px;
     }
   }
 }
@@ -181,10 +218,13 @@
   list-style: none;
   position: relative;
   flex-direction: column;
+  padding-top: 0.25rem;
+  margin: 0;
   width: 100%;
 
   @media screen and (min-width: 600px) {
     position: absolute;
+    padding-top: 0;
     min-width: 150px;
     background-color: white;
     width: max-content;
@@ -195,9 +235,11 @@
 }
 
 .dropdownMenu .navbarLink {
-  font-size: 1rem;
+  //border: 1px dotted blue;
+  font-size: 14px;
   font-weight: 400;
-  padding: 0.65rem 0;
+  padding: 0.5rem 0;
+  margin: 0;
   border-bottom: 1px solid #3333;
 
   &:hover {
@@ -209,9 +251,12 @@
   @media screen and (min-width: 768px) {
     border: 1px solid #3333;
     margin: 0 !important;
-    padding: 1rem;
+    padding: 0.65rem 1rem;
     font-size: 1rem;
     width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
   }
 }
 

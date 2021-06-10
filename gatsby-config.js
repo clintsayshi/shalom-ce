@@ -7,6 +7,9 @@ module.exports = {
     image: "favicon-32x32.png",
     author: `Clinton Manakane <clintonwamanakane@gmail.com>`,
   },
+  flags: {
+    THE_FLAG: false,
+  },
   plugins: [
     {
       resolve: `gatsby-transformer-remark`,

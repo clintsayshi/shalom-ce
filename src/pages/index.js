@@ -18,6 +18,7 @@ const IndexPage = (props) => {
     if (props.app === "twitter") return <VscTwitter />;
     if (props.app === "facebook") return <FaFacebook />;
     if (props.app === "instagram") return <FaInstagram />;
+    else return null;
   };
 
   return (

@@ -19,9 +19,19 @@ collections:
         name: "about"
         file: "content/about.md"
         fields:
-          - {label: "Name", name: "name",widget: "string",default: "Shalom Christian Embassy"}
-          - {label: "caption",name: "caption", widget: "string", default: "Church of all Nations"}
-          - {label: "Cover Image", name: "coverImg", widget: "image"}
+          - {
+              label: "Name",
+              name: "name",
+              widget: "string",
+              default: "Shalom Christian Embassy",
+            }
+          - {
+              label: "caption",
+              name: "caption",
+              widget: "string",
+              default: "Church of all Nations",
+            }
+          - { label: "Cover Image", name: "coverImg", widget: "image" }
           - label: "Socials"
             name: "socials"
             widget: "list"
@@ -29,7 +39,12 @@ collections:
             fields:
               - { label: "Username", name: "username", widget: "string" }
               - { label: "Base URL", name: "url", widget: "string" }
-              - { label: "Platform", name: 'platform', widget: "select", options: ["twitter", "facebook", "instagram"]}
+              - {
+                  label: "Platform",
+                  name: "platform",
+                  widget: "select",
+                  options: ["twitter", "facebook", "instagram"],
+                }
 
       - label: "Donations Page"
         name: "donations"
@@ -51,40 +66,19 @@ collections:
             name: "physclAddrss"
             widget: "list"
             fields:
-              - {
-              label: "Address Line",
-              name: "line",
-              widget: "string",
-            }
+              - { label: "Address Line", name: "line", widget: "string" }
           - label: "Postal Address"
             name: "pstlAddrss"
             widget: "list"
             fields:
-              - {
-              label: "Address Line",
-              name: "line",
-              widget: "string",
-            }
-            
-          - {
-              label: "Zip Code",
-              name: "zipcode",
-              widget: "string",
-            }
+              - { label: "Address Line", name: "line", widget: "string" }
+          - { label: "Zip Code", name: "zipcode", widget: "string" }
           - label: "Tel Numbers"
             name: "telNumbers"
             widget: "list"
             fields:
-              - {
-              label: "Number Holder",
-              name: "nmbrhldr",
-              widget: "string",
-            }
-              - {
-              label: "Number",
-              name: "number",
-              widget: "string",
-            }
+              - { label: "Number Holder", name: "nmbrhldr", widget: "string" }
+              - { label: "Number", name: "number", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
 
       - label: "Ministries Page"
@@ -141,22 +135,18 @@ collections:
         name: "missionVision"
         file: "content/missionvision.md"
         fields:
+          - { label: "Vision Statement", name: "vsnSttmnt", widget: "text" }
           - {
-              label: "Vision Statement",
-              name: "vsnSttmnt",
-              widget: "text",
+              label: "Relevant Bible Verse",
+              name: "quotedVerse",
+              widget: "string",
             }
-          - { label: "Relevant Bible Verse", name: "quotedVerse", widget: "string" }
           - {
               label: "Relevant Bible Verse from",
               name: "quotedVerseFrom",
               widget: "string",
             }
-          - {
-              label: "Mission Statement",
-              name: "mssnSttmnt",
-              widget: "text",
-            }
+          - { label: "Mission Statement", name: "mssnSttmnt", widget: "text" }
           - label: "Our Values"
             name: "values"
             widget: "list"
@@ -198,7 +188,7 @@ collections:
             summary: "{{fields.name - fields.time}}"
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label:  "Time", name: "time", widget: "string" }
+              - { label: "Time", name: "time", widget: "string" }
           - {
               label: "Weekday Services Cover",
               name: "weekdayServiceCvr",
@@ -214,13 +204,9 @@ collections:
                 widget: "list"
                 summary: "{{fields.name - fields.time}}"
                 fields:
-                  - {
-                      label: "Name of Service",
-                      name: "name",
-                      widget: "string",
-                    }
+                  - { label: "Name of Service", name: "name", widget: "string" }
                   - { label: "Time of Service", name: "time", widget: "string" }
-      
+
       - label: "Events Page"
         name: "events"
         file: "content/pages/events.md"

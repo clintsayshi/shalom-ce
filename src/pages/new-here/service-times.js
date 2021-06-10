@@ -1,26 +1,26 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 
-import { VscChevronRight } from "react-icons/vsc"
-import BackgroundImage from "gatsby-background-image"
-import { graphql } from "gatsby"
+import { VscChevronRight } from "react-icons/vsc";
+import BackgroundImage from "gatsby-background-image";
+import { graphql } from "gatsby";
 
-import * as styles from "./servicetimes.module.scss"
+import * as styles from "./servicetimes.module.scss";
 
-const ServiceTimesPage = props => {
+const ServiceTimesPage = (props) => {
   // Set Data.
-  const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
 
   // Set ImageData.
-  const imageData = props.data.desktop.childImageSharp.fluid
+  const imageData = props.data.desktop.childImageSharp.fluid;
 
   return (
     <Layout>
       <SEO title="Service Times" />
-      <div className="top">
+      {/* <div className="top">
         <div className="pageContainer topInner">
           <Link className="topLink" to="/">
             Home
@@ -28,7 +28,7 @@ const ServiceTimesPage = props => {
           <VscChevronRight />
           <Link className="topLink">Service Times</Link>
         </div>
-      </div>
+      </div> */}
 
       <div className="pageContainer pageHeading">
         <h2 className="page__title">{data.pageTitle}</h2>
@@ -100,10 +100,10 @@ const ServiceTimesPage = props => {
         </article>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default ServiceTimesPage
+export default ServiceTimesPage;
 // Data added via CMS
 
 export const query = graphql`
@@ -121,8 +121,8 @@ export const query = graphql`
               pageTitle
               pageBanner
               sundayMainSrvc
-              sundayServiceCvr{
-                childImageSharp{
+              sundayServiceCvr {
+                childImageSharp {
                   gatsbyImageData
                 }
               }
@@ -130,8 +130,8 @@ export const query = graphql`
                 name
                 time
               }
-              weekdayServiceCvr{
-                childImageSharp{
+              weekdayServiceCvr {
+                childImageSharp {
                   gatsbyImageData
                 }
               }
@@ -156,4 +156,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

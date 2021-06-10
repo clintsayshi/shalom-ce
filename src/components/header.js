@@ -12,84 +12,98 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <nav id="topNav" className={`${styles.navbar} container`}>
-        <Link to="/" className={styles.brand__logo}>
-          <img src={Logo} alt="Shalom Christian Embassy Logo" />
-          <div>
-            <h3 className={styles.logo__name}>Shalom</h3>
-            <h5 className={styles.logo__name2}>Christian Embassy</h5>
-          </div>
-        </Link>
+      <nav id="topNav" className={`${styles.navbar} `}>
+        <div className={`${styles.top} container`}>
+          <Link to="/" className={styles.brand__logo}>
+            <img src={Logo} alt="Shalom Christian Embassy Logo" />
+            <div>
+              <h3 className={styles.logo__name}>Shalom</h3>
+              <h5 className={styles.logo__name2}>Christian Embassy</h5>
+            </div>
+          </Link>
 
-        <button
-          aria-label="Mobile menu toggle button"
-          onClick={() => {
-            setMobileNav((prev) => !prev);
-          }}
-          className={styles.navbarMobileToggle}
-        >
-          {mobileNav ? <FiX /> : <FiMenu />}
-        </button>
-
-        <ul
-          className={
-            mobileNav
-              ? `${styles.navbarLinks} ${styles.display__flex}`
-              : styles.navbarLinks
-          }
-        >
-          <li
-            role="button"
-            onMouseEnter={() => {
-              setDropdown(true);
+          <button
+            aria-label="Mobile menu toggle button"
+            onClick={() => {
+              setMobileNav((prev) => !prev);
             }}
-            onMouseLeave={() => {
-              setDropdown(false);
-            }}
-            className={`${styles.navbarLink}`}
+            className={styles.navbarMobileToggle}
           >
-            <button
-              id={styles.navlink_with_dropdown}
-              onClick={() => setDropdown(!dropdown)}
-            >
-              <span>New Here</span>
-              {dropdown ? <FiChevronUp /> : <FiChevronDown />}
-            </button>
+            {mobileNav ? <FiX /> : <FiMenu />}
+          </button>
 
+          <h3 id={styles.slogan}>Church of all Nations</h3>
+        </div>
+
+        <div className={styles.bottom}>
+          <div className={`${styles.bottom__container} container`}>
             <ul
-              id={styles.dropdown__menu}
               className={
-                dropdown
-                  ? `${styles.dropdownMenu} ${styles.display__flex}`
-                  : `${styles.dropdownMenu}`
+                mobileNav
+                  ? `${styles.navbarLinks} ${styles.display__flex}`
+                  : styles.navbarLinks
               }
             >
               <li className={styles.navbarLink}>
-                <Link to="/new-here/service-times">Service times</Link>
+                <Link to="/">Home</Link>
+              </li>
+
+              <li
+                role="button"
+                onMouseEnter={() => {
+                  setDropdown(true);
+                }}
+                onMouseLeave={() => {
+                  setDropdown(false);
+                }}
+                className={`${styles.navbarLink}`}
+              >
+                <button
+                  id={styles.navlink_with_dropdown}
+                  onClick={() => setDropdown(!dropdown)}
+                >
+                  <span>New Here</span>
+                  {dropdown ? <FiChevronUp /> : <FiChevronDown />}
+                </button>
+
+                <ul
+                  id={styles.dropdown__menu}
+                  className={
+                    dropdown
+                      ? `${styles.dropdownMenu} ${styles.display__flex}`
+                      : `${styles.dropdownMenu}`
+                  }
+                >
+                  <li className={styles.navbarLink}>
+                    <Link to="/new-here/service-times">Service times</Link>
+                  </li>
+                  <li className={styles.navbarLink}>
+                    <Link to="/new-here/what-we-believe">What we believe</Link>
+                  </li>
+                  <li className={styles.navbarLink}>
+                    <Link to="/new-here/leadership">Our leadership</Link>
+                  </li>
+                  <li className={styles.navbarLink}>
+                    <Link to="/new-here/mission-values">
+                      Mission, Values...
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              <li className={styles.navbarLink}>
+                <Link to="/ministries">Ministries</Link>
+              </li>
+
+              <li className={styles.navbarLink}>
+                <Link to="/donations">Donations</Link>
               </li>
               <li className={styles.navbarLink}>
-                <Link to="/new-here/what-we-believe">What we believe</Link>
-              </li>
-              <li className={styles.navbarLink}>
-                <Link to="/new-here/leadership">Our leadership</Link>
-              </li>
-              <li className={styles.navbarLink}>
-                <Link to="/new-here/mission-values">Mission, Values...</Link>
+                <Link to="/contact">Contact us</Link>
               </li>
             </ul>
-          </li>
-
-          <li className={styles.navbarLink}>
-            <Link to="/ministries">Ministries</Link>
-          </li>
-
-          <li className={styles.navbarLink}>
-            <Link to="/donations">Donations</Link>
-          </li>
-          <li className={styles.navbarLink}>
-            <Link to="/contact">Contact us</Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
       {mobileNav && <div className={styles.overlay}></div>}
     </header>

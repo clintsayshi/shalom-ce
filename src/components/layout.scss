@@ -24,16 +24,9 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  font-size: 1rem;
+  font-size: 15px;
   font-feature-settings: "kern", "liga", "clig", "calt";
   height: 100%;
-
-  @media screen and (max-width: 1024px) {
-    font-size: 1.25rem;
-  }
-  @media screen and (max-width: 600px) {
-    font-size: 1rem;
-  }
 }
 
 main {
@@ -85,45 +78,6 @@ p {
   }
 }
 
-.top {
-  padding: 1rem 0;
-  margin-bottom: 1.5rem;
-  background: rgba(151, 99, 39, 0.062);
-
-  .topInner {
-    display: flex;
-    align-items: center;
-    * {
-      margin-right: 0.5rem;
-      font-size: 0.85rem;
-      text-decoration: none;
-      color: black;
-
-      &:nth-last-child(1) {
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-.pageHeading {
-  //border: 1px dotted blue;
-  margin-bottom: 1rem;
-  text-align: center;
-
-  @media screen and (min-width: 600px) {
-    margin-bottom: 4rem;
-  }
-}
-
-.page__title {
-  font-family: fraunces;
-  margin-bottom: 0.5rem;
-}
-.page__banner {
-  margin: 0.5rem 0;
-}
-
 .pageContainer {
   width: 95%;
   margin: auto;
@@ -133,6 +87,23 @@ p {
   @media screen and (min-width: 1025px) {
     width: 75%;
   }
+}
+
+.pageHeading {
+  padding: 0.5rem 0;
+  text-align: center;
+
+  @media (min-width: 600px) {
+    padding: 1rem 0;
+  }
+}
+
+.page__title {
+  font-family: fraunces;
+  margin-bottom: 0.5rem;
+}
+.page__banner {
+  margin: 0.5rem 0;
 }
 
 .divider {

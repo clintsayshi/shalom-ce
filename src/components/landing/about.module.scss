@@ -1,0 +1,87 @@
+/* About - Mission, Vision Statement */
+
+@use "../styles.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+.about {
+  padding: 2rem 1rem;
+
+  @media (min-width: 600px) {
+    padding: 2rem 0;
+  }
+}
+
+.about__ {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+.about__item {
+  //border: 1px dotted blue;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.item__header {
+  display: flex;
+  align-items: center;
+  color: $light-color;
+
+  & > * {
+    margin-right: 0.5rem;
+    color: $light-color;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.item__title {
+  //text-transform: uppercase;
+  font-weight: 400;
+  font-family: "fraunces";
+}
+
+.item__desc {
+  color: $light-color;
+  font-size: 1rem;
+  font-weight: 400;
+  //font-family: sans-serif;
+  line-height: 1.4;
+  margin: 1.5rem 0;
+}
+
+.btn__more {
+  position: relative;
+  background-color: transparent;
+  color: $light-color;
+  border: 2px solid $light-color;
+  z-index: 5;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($main-color, 0.8);
+}

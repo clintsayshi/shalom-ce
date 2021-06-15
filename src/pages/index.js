@@ -1,13 +1,19 @@
 import React from "react";
-
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-
-import * as styles from "./index.module.scss";
-import BackgroundImage from "gatsby-background-image";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { VscTwitter } from "react-icons/vsc";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
+
+import Layout from "../components/layout";
+import Hero from "../components/landing/hero";
+import {
+  Ministries,
+  Services,
+} from "../components/landing/ministries-and-services";
+import Events from "../components/landing/events";
+import About from "../components/landing/about";
+import SEO from "../components/seo";
+
+import * as styles from "../components/landing/index.module.scss";
 
 const IndexPage = (props) => {
   // Set Data.
@@ -25,43 +31,41 @@ const IndexPage = (props) => {
     <Layout>
       <SEO title="Home" />
 
-      <div className={`${styles.hero} container`}>
-        <p className={styles.heroSmallText}>Welcome to</p>
-        <h4 className={styles.heroBigText}>{data.name}</h4>
-        <h5 className={styles.heroMediumText}>{data.caption}</h5>
-      </div>
+      <Hero cover={imageData} />
 
-      <BackgroundImage
-        Tag="section"
-        className={styles.backgroundImage}
-        fluid={imageData}
-      >
-        <h2 className={styles.sectionTitle}>Join our next service</h2>
-        <p>Main Sunday Service</p>
-        <p>14:00 PM</p>
-        <Link className={styles.actionBtn} to="/new-here/service-times">
-          See more
-        </Link>
-      </BackgroundImage>
+      {/* What We Believes */}
+      <section className={`${styles.section}`}>
+        <div className="pageContainer">
+          <header>
+            <h3 className={`${styles.section__title}`}>Our Believes</h3>
+          </header>
+          <p className={`${styles.large__paragraph}`}>
+            We are a church that believes Man was saved through repentance and
+            faith in the finished work of Christ.
+          </p>
+        </div>
+      </section>
 
-      <div className="divider"></div>
+      <Ministries />
 
-      <div className="divider"></div>
+      <About cover={imageData} />
 
-      <section className="pageContainer">
-        <h4 className={styles.sectionTitle}>Follow us</h4>
-        <p className={styles.sectionBanner}>On social platforms for updates:</p>
+      <Services />
+
+      <Events />
+
+      <section className={`${styles.section} pageContainer`}>
+        <h3 className={styles.section__title}>Follow us on social media</h3>
         <div className={`sectionContent`}>
           {data.socials.map((social, index) => {
             return (
               <a
                 key={index}
-                className={styles.outsideLink}
                 target="_blank"
                 rel="noreferrer"
-                href={social.url}
+                href={social.url + social.username}
               >
-                {/*  <SocialApp app={social.platform} /> */}
+                <SocialApp app={social.platform} />
                 <h5>{social.username}</h5>
               </a>
             );

@@ -1,0 +1,101 @@
+.mnstries,
+.chrch__services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+
+  @media (min-width: 600px) {
+    padding: 2rem 0;
+  }
+}
+
+.mnstries {
+  padding-top: 0;
+}
+
+.mnstries__,
+.chrch_services__ {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 0rem;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    padding: 2rem 0;
+  }
+}
+
+.mnstry,
+.chrch__service {
+  width: 100%;
+
+  margin-bottom: 1.5rem;
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 600px) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.mnstry__name {
+  text-transform: capitalize;
+  font-family: "fraunces", "poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+
+  margin-bottom: 1rem;
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+}
+
+.mnstry__desc,
+.chrch__desc {
+  font-size: 1rem;
+  text-align: center;
+
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+}
+
+/* Church services */
+.chrch__services {
+  //border: 1px dotted blue;
+}
+
+/* .chrch__services__ {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+} */
+
+.chrch__service {
+  text-align: center;
+}
+.chrch__desc {
+  font-size: 1rem;
+  text-align: center;
+
+  @media (min-width: 600px) {
+    //text-align: left;
+  }
+}
+
+.srvc__day {
+  //border: 1px dotted blue;
+  padding-bottom: 0.25rem;
+  text-align: center;
+}

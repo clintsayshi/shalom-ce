@@ -1,0 +1,41 @@
+/* HERO */
+@use "../styles.scss" as *;
+
+.hero {
+  position: relative;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 5rem 0;
+  text-align: center;
+  color: #fff;
+
+  @media (min-width: 600px) {
+    padding: 10rem 0;
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($main-color, 0.75);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 5;
+
+  h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+#hero__text {
+  font-size: 2rem;
+  font-family: "fraunces", "poppins", sans-serif;
+  font-weight: 400;
+  margin: 0.25rem 0;
+}

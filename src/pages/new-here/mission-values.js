@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
-
-import { VscChevronRight } from "react-icons/vsc";
-import { graphql } from "gatsby";
 
 import * as styles from "./mission.module.scss";
 

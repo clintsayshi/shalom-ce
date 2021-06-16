@@ -12,7 +12,7 @@ const MissionPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Mission, Vision, Values..." />
+      <SEO title="Vision, Mission &amp; Values" />
 
       <section className={`pageContainer ${styles.row}`}>
         <h2 className="page__title">Vision Statement.</h2>

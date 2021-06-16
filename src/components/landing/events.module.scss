@@ -29,10 +29,8 @@
   border: 2px dotted #3333;
 
   &:hover {
-    background-color: $main-color;
     border-style: solid;
     border-color: $main-color;
-    color: #ffff;
   }
 
   @media (min-width: 600px) {
@@ -108,11 +106,14 @@
   }
 }
 
+.event_timeday {
+  font-style: italic;
+}
+
 .event__location {
   font-size: 0.75rem;
   display: flex;
   align-items: center;
-  //border: 1px dotted blue;
   margin-bottom: 0.5rem;
 
   & > * {

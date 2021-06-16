@@ -14,12 +14,12 @@ export default class ContactForm extends React.Component {
     const { status } = this.state;
     return (
       <form
-        className={styles.contactForm}
+        id={styles.contact__form}
         onSubmit={this.submitForm}
         action="https://formspree.io/f/xeqpddeo"
         method="POST"
       >
-        {/* <h2 className={styles.section__title}>Leave us a message</h2> */}
+        <h3 className={styles.section__title}>Leave us a message</h3>
 
         <input
           className={styles.input__text}

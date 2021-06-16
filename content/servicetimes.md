@@ -2,7 +2,7 @@
 pageTitle: Service Times.
 pageBanner: We hope to provide enough information to help prepare you and to
   make sure you know what to expect as you come fellowship with us.
-sundayMainSrvc: 10h30 - 13h00
+sundayMainSrvc: 10h30
 sundayServiceCvr: media/gabriella-clare-marino-d6ufruwkslm-unsplash.jpg
 sundaySchools:
   - name: Elders School

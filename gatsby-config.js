@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Shalom Christian Embassy`,
-    titleTemplate: "%s · Shalom Christian Embassy",
+    titleTemplate: "%s · Shalom Christian Embassy Church",
     description: `The church of all nations.`,
     url: "shalomchristianembassy.netlify.com",
     image: "favicon-32x32.png",

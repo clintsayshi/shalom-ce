@@ -80,126 +80,13 @@
   }
 }
 
-.mssbtn {
-  background-color: #fff;
-  color: #000;
-}
+/* Socials */
 
-/* Events */
-.events {
-  background-color: #97632710;
-  padding: 4rem 0;
-}
-
-.events__ {
-  //border: 1px dotted blue;
-
+.socials {
+  border: 1px dotted blue;
   padding: 1rem 0;
 }
 
-.event {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-
-  &:nth-last-child(1) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: 600px) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px dotted #3333;
-  }
+.socials__link {
+  font-size: 1.4rem;
 }
-
-.event__date {
-  display: flex;
-  align-items: center;
-
-  @media (min-width: 600px) {
-    //display: block;
-    flex: 0.5;
-  }
-}
-
-.event__day {
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin-right: 2px;
-
-  @media (min-width: 600px) {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-right: 8px;
-  }
-}
-
-.event__mnthyr {
-  font-size: 0.75rem;
-  font-weight: 400;
-
-  @media (min-width: 600px) {
-    font-size: 1rem;
-  }
-}
-
-.event__name {
-  line-height: 1.4;
-  font-weight: 400;
-  margin: 0;
-
-  @media (min-width: 600px) {
-    flex: 1;
-  }
-}
-
-.event__time {
-  display: flex;
-  align-items: center;
-
-  & > *:nth-child(1) {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-  }
-
-  small {
-    display: block;
-  }
-
-  @media (min-width: 600px) {
-    flex: 0.5;
-  }
-}
-
-.event__location {
-  font-size: 0.75rem;
-  display: flex;
-  align-items: center;
-  //border: 1px dotted blue;
-  margin-bottom: 0.5rem;
-
-  & > * {
-    margin-right: 0.25rem;
-
-    &:nth-last-child(1) {
-      margin-right: 0;
-    }
-  }
-
-  @media (min-width: 600px) {
-    flex: 0.75;
-    font-size: 1rem;
-    margin-bottom: 0%;
-  }
-}
-
-/* Ministries */
-
-/* .srvc__time {
-} */
-
-/* Mission */

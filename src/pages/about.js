@@ -1,13 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { VscChevronRight } from "react-icons/vsc";
 
-import  * as styles from "./about.module.scss";
-
-import { graphql } from "gatsby";
+import * as styles from "./about.module.scss";
 
 const AboutPage = ({ data }) => {
   //const imageData = data.image1.childImageSharp.fluid
@@ -15,15 +11,6 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About us" />
-      <div className="top">
-        <div className="pageContainer topInner">
-          <Link className="topLink" to="/">
-            Home
-          </Link>
-          <VscChevronRight />
-          <Link className="topLink">About us</Link>
-        </div>
-      </div>
 
       <div className={`pageContainer  ${styles.pageHeader}`}></div>
 
@@ -43,15 +30,3 @@ const AboutPage = ({ data }) => {
 };
 
 export default AboutPage;
-
-export const query = graphql`
-  query {
-    logos: file(relativePath: { eq: "logo-2x.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;

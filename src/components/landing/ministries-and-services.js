@@ -53,19 +53,19 @@ export const Services = () => {
         </header>
 
         <div className={styles.chrch_services__}>
-          <article class={styles.chrch__service}>
+          <article className={styles.chrch__service}>
             <h3 className={styles.srvc__day}>Sundays</h3>
             <p className={styles.chrch__desc}>We have a service every Sunday</p>
             <small>10:00 AM</small>
           </article>
-          <article class={styles.chrch__service}>
+          <article className={styles.chrch__service}>
             <h3 className={styles.srvc__day}>Saturdays</h3>
             <p className={styles.chrch__desc}>
               We have a service on every Sunday
             </p>
             <small>10:00 AM</small>
           </article>
-          <article class={styles.chrch__service}>
+          <article className={styles.chrch__service}>
             <h3 className={styles.srvc__day}>Weekdays</h3>
             <p className={styles.chrch__desc}>
               Join us on weekdays for "Fasting &amp; Prayer days", "Miracle
@@ -75,7 +75,7 @@ export const Services = () => {
           </article>
         </div>
 
-        <Link className={index.btn__more} to="/">
+        <Link className={index.btn__more} to="/new-here/service-times">
           See More
         </Link>
       </div>

@@ -13,7 +13,7 @@ const DonationsPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="Donations" />
+      <SEO title="Give" />
 
       <div className={`pageContainer pageHeading`}>
         <h2 className="page__title">{data.pageTitle}</h2>

@@ -36,7 +36,7 @@ const Header = () => {
         </div>
 
         <div className={styles.bottom}>
-          <div className={`${styles.bottom__container} container`}>
+          <div className={`container`}>
             <ul
               className={
                 mobileNav
@@ -96,10 +96,19 @@ const Header = () => {
               </li>
 
               <li className={styles.navbarLink}>
-                <Link to="/donations">Donations</Link>
+                <Link to="/contact">Contact</Link>
               </li>
+
+              {/* <li className={styles.navbarLink}>
+                <Link to="/events">Events</Link>
+              </li>
+
               <li className={styles.navbarLink}>
-                <Link to="/contact">Contact us</Link>
+                <Link to="/gallery">Gallery</Link>
+              </li> */}
+
+              <li className={styles.navbarLink}>
+                <Link to="/donations">Give</Link>
               </li>
             </ul>
           </div>

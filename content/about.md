@@ -1,7 +1,7 @@
 ---
-name: Shalom Christian Embassy
-caption: Church of all Nations
-coverImg: media/gabriella-clare-marino-d6ufruwkslm-unsplash.jpg
+name: Shalom Christian Embassy Church
+slogan: Church of all Nations
+heroImage: media/gabriella-clare-marino-d6ufruwkslm-unsplash.jpg
 socials:
   - username: shalomcec
     url: https:/facebook.com/

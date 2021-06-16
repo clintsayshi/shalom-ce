@@ -26,18 +26,23 @@ collections:
               default: "Shalom Christian Embassy",
             }
           - {
-              label: "caption",
-              name: "caption",
+              label: "Slogan",
+              name: "Slogan",
               widget: "string",
               default: "Church of all Nations",
             }
-          - { label: "Cover Image", name: "coverImg", widget: "image" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
           - label: "Socials"
             name: "socials"
             widget: "list"
             summary: "{{fields.url}} - {{fields.username}}"
             fields:
-              - { label: "Username", name: "username", widget: "string" }
+              - {
+                  label: "Username",
+                  name: "username",
+                  widget: "string",
+                  default: "shalomcec",
+                }
               - { label: "Base URL", name: "url", widget: "string" }
               - {
                   label: "Platform",
@@ -147,6 +152,7 @@ collections:
               widget: "string",
             }
           - { label: "Mission Statement", name: "mssnSttmnt", widget: "text" }
+          - { label: "Cover Image", name: "coverImage", widget: "image" }
           - label: "Our Values"
             name: "values"
             widget: "list"

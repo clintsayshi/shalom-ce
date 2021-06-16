@@ -1,89 +1,67 @@
-import React from "react"
+import React from "react";
+import { graphql, StaticQuery } from "gatsby";
 
-import { VscTwitter } from "react-icons/vsc"
-import { FaInstagram, FaFacebook } from "react-icons/fa"
-import "./layout.scss"
+import { VscTwitter } from "react-icons/vsc";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
+import "./layout.scss";
+import * as styles from "./footer.module.scss";
 
 const Footer = () => (
-  <footer>
-    <div className="topFooter pageContainer">
+  <footer id={styles.footer}>
+    <div className={`${styles.top__footer} pageContainer`}>
       <a className="backToTop" href="#topNav">
-        {/* <VscChevronUp /> */}
-        <p>Back to top</p>
+        Back to top
       </a>
     </div>
 
-    <div className="bottomFooter">
-      <div className="pageContainer">
+    <div className={styles.bottom__footer}>
+      <div className={`${styles.pageContainer} pageContainer`}>
         <h5>&copy; {new Date().getFullYear()} Shalom Christian Embassy</h5>
-        <div className="socialIcons">
-          <a
-            className="socialIcon"
-            target="_blank"
-            rel="noreferrer"
-            href="https:/www.twitter.com/mcclintsayshi"
-          >
-            <VscTwitter />
-          </a>
-          <a
-            className="socialIcon"
-            rel="noreferrer"
-            target="_blank"
-            href="https:/facebook.com/"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            className="socialIcon"
-            target="_blank"
-            rel="noreferrer"
-            href="https:/instagram.com/"
-          >
-            <FaInstagram />
-          </a>
-        </div>
+
+        <StaticQuery
+          query={graphql`
+            query socials {
+              file(
+                sourceInstanceName: { eq: "content" }
+                name: { eq: "about" }
+              ) {
+                childMarkdownRemark {
+                  frontmatter {
+                    socials {
+                      username
+                      platform
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          `}
+          render={(data) => {
+            const socials = data.file.childMarkdownRemark.frontmatter.socials;
+            return (
+              <div className={styles.social__icons}>
+                {React.Children.toArray(
+                  socials.map((s) => (
+                    <a
+                      className={styles.social__icon}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={s.url + s.username}
+                    >
+                      {s.platform === "twitter" ? <VscTwitter /> : ""}
+                      {s.platform === "facebook" ? <FaFacebook /> : ""}
+                      {s.platform === "instagram" ? <FaInstagram /> : ""}
+                    </a>
+                  ))
+                )}
+              </div>
+            );
+          }}
+        />
       </div>
     </div>
   </footer>
-)
+);
 
-export default Footer
-
-/* 
-
-<div className="footerTop">
-      <div className="pageContainer">
-        <a className="backToTop" href="#topNav">
-          <VscChevronUp />
-          <p>Back to top</p>
-        </a>
-      </div>
-    </div>
-
-    <div className="footerBottom">
-      <div className="pageContainer">
-        <h5>&copy; {new Date().getFullYear()} Shalom Christian Embassy</h5>
-
-        <div className="socialIcons">
-          <a
-            className="socialIcon"
-            target="_blank"
-            href="https:/www.twitter.com/mcclintsayshi"
-          >
-            <VscTwitter />
-          </a>
-          <a className="socialIcon" target="_blank" href="https:/facebook.com/">
-            <FaFacebook />
-          </a>
-          <a
-            className="socialIcon"
-            target="_blank"
-            href="https:/instagram.com/"
-          >
-            <FaInstagram />
-          </a>
-        </div>
-      </div>
-    </div>
-
-*/
+export default Footer;

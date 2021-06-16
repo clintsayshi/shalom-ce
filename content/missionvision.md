@@ -12,6 +12,7 @@ mssnSttmnt: To ensure that the peace of our Lord Jesus Christ is
   impartation of the Gifts of the Holy Spirit through which all are equipped for
   the readiness of the harvest and spreading of the good news of the Kingdom of
   God.
+coverImage: media/gabriella-clare-marino-d6ufruwkslm-unsplash.jpg
 values:
   - value: Holiness
   - value: Integrity

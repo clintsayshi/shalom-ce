@@ -1,18 +1,45 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
+
+import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 import { FaRegHeart } from "react-icons/fa";
 
 import * as index from "./index.module.scss";
 import * as styles from "./about.module.scss";
 
-export default function About(props) {
+export default function About() {
+  const { cover } = useStaticQuery(
+    graphql`
+      query {
+        cover: file(
+          sourceInstanceName: { eq: "content" }
+          name: { eq: "missionvision" }
+        ) {
+          childMarkdownRemark {
+            frontmatter {
+              coverImage {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+
+  // Set ImageData.
+  console.log(cover);
+  let imageData =
+    cover.childMarkdownRemark.frontmatter.coverImage.childImageSharp.fluid;
+
   return (
-    <BackgroundImage
-      Tag="div"
-      className={`${index.section}`}
-      fluid={props.cover}
-    >
+    <BackgroundImage Tag="div" className={`${index.section}`} fluid={imageData}>
       <div className={`${styles.about} pageContainer`}>
         <div className={styles.about__}>
           <article className={styles.about__item}>
@@ -41,7 +68,7 @@ export default function About(props) {
         </div>
         <Link
           className={`${index.btn__more} ${styles.btn__more}`}
-          to="/new-here/service-times"
+          to="/new-here/mission-values"
         >
           learn more
         </Link>

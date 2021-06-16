@@ -9,7 +9,7 @@ import * as styles from "./servicetimes.module.scss";
 
 const ServiceTimesPage = (props) => {
   // Set Data.
-  const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter;
+  const data = props.data.file.childMarkdownRemark.frontmatter;
 
   // Set ImageData.
   const imageData = props.data.desktop.childImageSharp.fluid;
@@ -96,40 +96,35 @@ export default ServiceTimesPage;
 
 export const query = graphql`
   query {
-    allFile(
-      filter: {
-        sourceInstanceName: { eq: "content" }
-        name: { eq: "servicetimes" }
-      }
-    ) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              pageTitle
-              pageBanner
-              sundayMainSrvc
-              sundayServiceCvr {
-                childImageSharp {
-                  gatsbyImageData
-                }
+    file(sourceInstanceName: { eq: "content" }, name: { eq: "servicetimes" }) {
+      childMarkdownRemark {
+        frontmatter {
+          pageTitle
+          pageBanner
+          sundayMainSrvc
+          sundayServiceCvr {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
               }
-              sundaySchools {
-                name
-                time
+            }
+          }
+          sundaySchools {
+            name
+            time
+          }
+          weekdayServiceCvr {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
               }
-              weekdayServiceCvr {
-                childImageSharp {
-                  gatsbyImageData
-                }
-              }
-              weekdayServices {
-                weekday
-                serviceDetails {
-                  name
-                  time
-                }
-              }
+            }
+          }
+          weekdayServices {
+            weekday
+            serviceDetails {
+              name
+              time
             }
           }
         }

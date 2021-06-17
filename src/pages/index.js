@@ -39,13 +39,13 @@ const IndexPage = () => {
 
       <Services />
 
-      <section className={`${styles.section} pageContainer`}>
+      {/* <section className={`${styles.section} pageContainer`}>
         <header>
           <h3 className={`${styles.section__title}`}>Gallery</h3>
         </header>
 
         <div></div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

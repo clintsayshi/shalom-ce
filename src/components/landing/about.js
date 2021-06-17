@@ -4,7 +4,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaRegLightbulb } from "react-icons/fa";
 
 import * as index from "./index.module.scss";
 import * as styles from "./about.module.scss";
@@ -57,7 +57,7 @@ export default function About() {
 
           <article className={styles.about__item}>
             <header className={styles.item__header}>
-              <FaRegHeart />
+              <FaRegLightbulb />
               <h2 className={`${styles.item__title}`}>Vision Statement.</h2>
             </header>
             <p className={styles.item__desc}>
